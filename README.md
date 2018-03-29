@@ -255,8 +255,8 @@ ok.trans(num, new TransactionSucCallback() {
 * 将自己的合约复制进/web3sdk/tools/contracts文件夹中（建议删除文件夹中其他无关的合约），SDK执行gradle build 之后生成工具包。
 * 工具包中/dist/bin文件夹下为合约编译的执行脚本，/dist/contracts为合约存放文件夹，/dist/apps为sdk jar包，/dist/lib为sdk依赖jar包，/dist/output（不需要新建，脚本会生成）为编译后输出的abi、bin及java文件目录。
 * 在bin文件夹下compile.sh为编译合约的脚本，执行命令sh compile.sh [参数1：java包名]执行成功后将在output目录生成所有合约对应的abi,bin,java文件，其文件名类似：合约名字.[abi|bin|java]。compile.sh脚本执行步骤实际分为两步，1.首先将sol源文件编译成abi和bin文件，依赖solc工具；2.将bin和abi文件编译java Wrap代码，依赖web3sdk.
-* 例如：在以上工作都以完成,在/dist/bin文件夹下输入命令
-    sh compile.sh com ,在/dist/output目录下回生成abi、bin文件，在/dist/output/com目录下生成java Wrap代码。
+* 例如：当fisco-solc成功安装，合约已经拷贝到所在目录，目录结构如上描述，在/dist/bin文件夹下执行命令
+    sh compile.sh com ，结果会在/dist/output目录下回生成abi、bin文件，在/dist/output/com目录下生成java Wrap代码。
 
 ## （六）FAQ
 ### 6.1、使用工具包生成合约Java Wrap代码时会报错。
